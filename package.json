@@ -1,0 +1,44 @@
+{
+  "name": "webgl-skeletal-animation-tutorial",
+  "version": "0.0.1",
+  "description": "A quick tutorial on WebGL skeletal animation using small modules",
+  "main": "index.js",
+  "dependencies": {
+    "gl-mat4": "^1.1.4",
+    "keyframes-to-dual-quats": "^1.0.0",
+    "load-collada-dae": "^0.6.0",
+    "raf-loop": "^1.1.3",
+    "skeletal-animation-system": "^0.6.1"
+  },
+  "devDependencies": {
+    "budo": "^9.3.0"
+  },
+  "scripts": {
+    "start": "budo --open --live index.js --host=127.0.0.1",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chinedufn/webgl-skeletal-animation-tutorial.git"
+  },
+  "keywords": [
+    "webgl",
+    "gl",
+    "skeletal",
+    "animation",
+    "skinning",
+    "vertex",
+    "glsl",
+    "dual",
+    "quaternion",
+    "animate",
+    "bone",
+    "joint"
+  ],
+  "author": "Chinedu Francis Nwafili <frankie.nwafili@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/chinedufn/webgl-skeletal-animation-tutorial/issues"
+  },
+  "homepage": "https://github.com/chinedufn/webgl-skeletal-animation-tutorial#readme"
+}

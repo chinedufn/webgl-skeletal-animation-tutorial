@@ -4,15 +4,19 @@ var canvas = document.createElement('canvas')
 canvas.width = 400
 canvas.height = 400
 
+// Get our WebGL Context that we'll use to pass data to the GPU
+var gl = canvas.getContext('webgl')
+gl.enable(gl.DEPTH_TEST)
+
 // We create an input slider that will control our animations playback speed
 // You can drag this slider to view the animation in either slow or fast motion
-var range = document.createElement('input')
-range.type = 'range'
-range.min = 0
-range.max = 2
-range.step = 0.01
-range.value = 1
-range.style.display = 'block'
+var playbackSlider = document.createElement('input')
+playbackSlider.type = 'range'
+playbackSlider.min = 0
+playbackSlider.max = 2
+playbackSlider.step = 0.01
+playbackSlider.value = 1
+playbackSlider.style.display = 'block'
 
 // We create a display that shows us how fast our animation is playing
 var speedDisplay = document.createElement('span')
@@ -20,20 +24,16 @@ speedDisplay.innerHTML = 'Playback Speed: 100%'
 
 // Whenever we drag our input slider we update our playback speed
 var playbackSpeed = 1
-range.oninput = function () {
-  playbackSpeed = range.value
+playbackSlider.oninput = function () {
+  playbackSpeed = playbackSlider.value
   speedDisplay.innerHTML = 'Playback Speed: ' + (playbackSpeed * 100).toFixed(0) + '%'
 }
 
 // We insert our canvas and controls into the page
 var demoLocation = document.querySelector('#skeletal-animation-tutorial') || document.body
 demoLocation.appendChild(canvas)
-demoLocation.appendChild(range)
+demoLocation.appendChild(playbackSlider)
 demoLocation.appendChild(speedDisplay)
-
-// Get our WebGL Context that we'll use to pass data to the GPU
-var gl = canvas.getContext('webgl')
-gl.enable(gl.DEPTH_TEST)
 
 // Grab our model's JSON data that we'll use to know how to render it
 var cowboyJSON = require('./cowboy.json')

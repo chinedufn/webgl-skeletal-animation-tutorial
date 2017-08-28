@@ -14,7 +14,7 @@
     "budo": "^9.3.0"
   },
   "scripts": {
-    "start": "budo --open --live index.js --host=127.0.0.1",
+    "start": "budo index.js --open --live --host=127.0.0.1",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

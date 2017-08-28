@@ -1,5 +1,7 @@
 # WebGL Skeletal Animation Small Module Tutorial
 
+![skeletal animation gif](http://g.recordit.co/vw1gfr1Eyl.gif)
+
 ## To read the tutorial
 
 http://chinedufn.com/webgl-skeletal-animation-tutorial/
